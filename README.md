@@ -15,6 +15,10 @@ public:
 ```
 Syntax could look something like this:
 ```cpp
+using namespace xdf;
+
+...
+
 XDFRoot root;
 root.addValue("version", "0.1.0");
 

@@ -2,7 +2,9 @@
 XDF is a simple and versatile static C++ library for handling data with minimal overhead.
 ## Usage
 The format requires you to have an XDFRoot object as the root, as that has the write function. The root does not require a name, however XDFNode does.
+[^1]
 ```cpp
+// node.h
 class XDFRoot : public XDFNode {
 public:
   ...
@@ -11,8 +13,7 @@ public:
   bool read(const std::string& filename);
 };
 ```
-[^1]
-Syntax looks something like this:
+Syntax could look something like this:
 ```cpp
 XDFRoot root;
 root.addValue("version", "0.1.0");
@@ -34,4 +35,4 @@ if (root.read("file.xdf") {
 }
 ```
 
-[^1]: include/xdf/node.h
+[^1]: [include/xdf/node.h](include/xdf/node.h)

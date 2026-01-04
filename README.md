@@ -35,4 +35,4 @@ if (root.read("file.xdf") {
 }
 ```
 
-[^1]: [include/xdf/node.h](include/xdf/node.h)
+[^1]: [include/xdf/node.h](https://github.com/Wolfboy248/XDF/blob/main/include/xdf/node.h)

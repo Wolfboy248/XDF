@@ -75,21 +75,21 @@ void XDFRoot::write(const std::string& filename) {
 
 bool XDFRoot::read(const std::string& filename) {
   std::ifstream f;
-  std::ifstream testF;
+  // std::ifstream testF;
 
   f.open(filename);
-  testF.open(filename);
+  // testF.open(filename);
 
-  Tokenizer testTz(testF);
-  Token t = testTz.next();
+  // Tokenizer testTz(testF);
+  // Token t = testTz.next();
 
-  while (t.type != TokenType::End) {
-    std::cout << "Type: " << GetTokenTypeName(t.type) << " | Text: " << '"' << t.text << '"' << std::endl;
-
-    t = testTz.next();
-  }
-
-  testF.close();
+  // while (t.type != TokenType::End) {
+  //   std::cout << "Type: " << GetTokenTypeName(t.type) << " | Text: " << '"' << t.text << '"' << std::endl;
+  //
+  //   t = testTz.next();
+  // }
+  //
+  // testF.close();
 
   Tokenizer tz(f);
 
@@ -104,8 +104,6 @@ bool XDFRoot::read(const std::string& filename) {
   }
 
   if (first.type == TokenType::Identifier || first.type == TokenType::String) {
-    std::cout << "Root has name\n";
-
     Token brace = tz.next();
     if (brace.type != TokenType::LBrace)
       return false;

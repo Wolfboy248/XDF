@@ -113,20 +113,14 @@ static void parseNode(Tokenizer& tz, XDFNode& node) {
       return;
 
     if (t.type == TokenType::String) {
-      // TODO: Make it so that it also supports identifers that are strings
       Token next = tz.next();
 
-      if (next.type == TokenType::LBrace)
-
-        std::cout << "Adding value: " << next.text << " to var: " << t.text << std::endl;
       node.addValue(t.text, next.text);
       continue;
     }
 
     if (t.type == TokenType::Identifier) {
       Token brace = tz.next();
-
-      std::cout << "Going into identifier: " << t.text << std::endl;
 
       if (brace.type != TokenType::LBrace)
         throw std::runtime_error("Expected { after identifier");

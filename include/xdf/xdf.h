@@ -2,8 +2,3 @@
 
 #include "node.h"
 
-namespace xdf {
-
-
-}
-
